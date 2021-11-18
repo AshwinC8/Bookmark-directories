@@ -1,6 +1,7 @@
 #!/bin/bash
 #This file should be sourced
 
+#put ur Personal text file to save ur list
 filename='/mnt/d/ashwi/College/tools/DL.txt';
 
 function append() {
@@ -44,9 +45,9 @@ function BookmarksLists(){
 
 
 
-if [[ "$1" == "add" ]] then
+if [[ "$1" == "add" ]]; then
   append $2;
-elif [[ "$1" == "delete" ]] then
+elif [[ "$1" == "delete" ]]; then
   delete ;
 else
   BookmarksLists;
