@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cat /mnt/d/ashwi/College/tools/directory_lists.txt
+
+forat dbs.txt'; do
+echo $i
+done
+wait
