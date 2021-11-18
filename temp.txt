@@ -1,3 +1,0 @@
-/mnt/d/ashwi/College
-/mnt/d/ashwi/College/web
-/mnt/d/ashwi/College/tools
