@@ -1,7 +1,7 @@
 #!/bin/bash
 #This file should be sourced
 
-#put ur Personal text file to save ur list
+#Path to Personal text file to save ur list
 filename='/mnt/d/ashwi/College/tools/List.txt';
 
 function append() {
