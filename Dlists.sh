@@ -2,7 +2,7 @@
 #This file should be sourced
 
 #put ur Personal text file to save ur list
-filename='/mnt/d/ashwi/College/tools/DL.txt';
+filename='/mnt/d/ashwi/College/tools/List.txt';
 
 function append() {
   if [ "$1" != "" ]; then
@@ -52,5 +52,3 @@ elif [[ "$1" == "delete" ]]; then
 else
   BookmarksLists;
 fi
-
-
