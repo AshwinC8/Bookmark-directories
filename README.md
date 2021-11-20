@@ -1,5 +1,5 @@
 # Bookmark-directories
-Have list of paths to your frequently using directories for quick access.
+Have list of paths to your frequently using directories for quick access in your linux terminal.
 
 # Requirements
 <li>Bash shell
