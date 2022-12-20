@@ -24,7 +24,7 @@ Have list of paths to your frequently using directories for quick access in your
 
 ![dl image](images/dl.png)
 
-### dl add <path of new file to be added>
+### dl add "path of new file to be added"
 
 ![add image](images/dl-add.png)
 
