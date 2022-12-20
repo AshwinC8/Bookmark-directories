@@ -2,23 +2,29 @@
 #This file should be sourced
 
 #Path to Personal text file to save ur list
-filename='/mnt/d/ashwi/College/tools/List.txt';
+filename='/mnt/d/ashwi/College/tools/list.txt';
 
 function append() {
   if [ "$1" != "" ]; then
-      echo $1 >> $filename;
+      echo "$1" >> $filename;
   fi
 }
 
 function delete() {
   echo -e "    \e[1;4mBOOKMARKS\e[0m\n";
 
+  # local count=1;
+  # for i in $(cat $filename); do
+  #   echo "$count. ("$i")";
+  #   count=$(($count+1));
+  # done
+  # wait
+
   local count=1;
-  for i in $(cat $filename); do
-    echo "$count. $i";
+  while IFS= read -r line; do
+    printf '%d. %s\n' $count "$line"
     count=$(($count+1));
-  done
-  wait
+  done <<< $(cat $filename )
 
   echo -e -n "\nEnter choice: ";
   read count;
@@ -30,23 +36,22 @@ function BookmarksLists(){
   echo -e "    \e[1;4mBOOKMARKS\e[0m\n";
 
   local count=1;
-  for i in $(cat $filename); do
-    echo "$count. $i";
+  while IFS= read -r line; do
+    printf '%d. %s\n' $count "$line"
     count=$(($count+1));
-  done
-  wait
+  done <<< $(cat $filename )
 
   echo -e -n "\nEnter choice: ";
   read count;
 
-  var=$(sed -n ${count}p $filename);
+  var="$(sed -n ${count}p $filename)";
   cd $var;
 }
 
 
 
 if [[ "$1" == "add" ]]; then
-  append $2;
+  append "$2";
 elif [[ "$1" == "delete" ]]; then
   delete ;
 else
